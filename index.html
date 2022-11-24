@@ -9,7 +9,7 @@
     <script src="scripts.js"></script>
 </head>
 <body>
-    <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/easyqrcodejs@4.4.12/dist/easy.qrcode.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 
     <div class="form">
@@ -18,7 +18,7 @@
             <input type="url" id="website" value="https://ajans360.com" required />
             <button type="button" onclick="generateQR()">Generate</button>
         </form>
-      
+
         <div id="container">
             <div id="qrcode" class="qrcode"></div>
             <button id="downloadQR"> Download QR Code </button>
