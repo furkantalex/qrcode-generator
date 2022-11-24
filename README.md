@@ -1,2 +1,1 @@
-# qrcode-generator
-QR Code Generate &amp; Download
+# QR Code Generate &amp; Download
