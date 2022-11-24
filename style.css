@@ -1,5 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap');
+
 .form {
-    font-family: Helvetica, sans-serif;
+    font-family: 'Montserrat', sans-serif;
     max-width: 400px;
     margin: 0 auto;
     padding: 16px;
@@ -37,7 +39,7 @@
     margin: 0 auto;
     padding: 3%;
     background: #dc3345;
-    border-bottom: 2px solid #dc3345;
+    border-bottom: 1px solid #dc3345;
     border-top-style: none;
     border-right-style: none;
     border-left-style: none;
@@ -55,8 +57,9 @@
 
 .qrcode{
     padding: 35px 35px 70px 35px;
+    text-align: center;
 }
-.qrcode img{
+.qrcode svg{
     margin: 0 auto;
     padding: 15px;
     background: white;
