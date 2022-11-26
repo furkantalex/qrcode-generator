@@ -61,16 +61,13 @@ function nestedSvgToGroup(svg, groupMatrix = 0) {
     let svgSubChildren = [...svgSub.children];
     groupMatrix = groupMatrix ? groupMatrix : transFormToMatrix(svgSub);
 
-    //replace nested svg with group - apply matrix
     let group = document.createElementNS("http://www.w3.org/2000/svg", "g");
     group.classList.add("svgNest");
     group.setAttribute("transform", `matrix( ${groupMatrix} )`);
 
-    //copy children to group
     svgSubChildren.forEach(function (child, i) {
       group.appendChild(child);
     });
-    //remove nested svg
     svgSub.replaceWith(group);
   }
 }
@@ -91,7 +88,6 @@ function transFormToMatrix(el) {
     "svg"
   ];
   if (types.indexOf(type) !== -1) {
-    // get el matrix
     let matrix = el.getTransformToElement(el.parentNode.closest("svg"));
     let [a, b, c, d, e, f] = [
       matrix.a,
@@ -102,7 +98,6 @@ function transFormToMatrix(el) {
       matrix.f
     ];
     matrixString = [a, b, c, d, e, f].join(" ");
-    //exclude non transformed elements
     if (matrixString != "1 0 0 1 0 0") {
       el.setAttribute("transform", `matrix(${matrixString})`);
       el.removeAttribute("transform-origin");
